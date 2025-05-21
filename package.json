@@ -1,6 +1,6 @@
 {
   "name": "watchlog-metric",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This is a package to communicate with watchlog.io agent",
   "main": "index.js",
   "scripts": {
