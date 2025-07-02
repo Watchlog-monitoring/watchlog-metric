@@ -5,7 +5,7 @@ const isKubernetes = Boolean(process.env.KUBERNETES_SERVICE_HOST);
 
 // اگر داخل Kubernetes هست، آدرس agent درون‌کلاستری را استفاده می‌کنیم
 const serverURL = isKubernetes
-  ? 'http://watchlog-agent.default.svc.cluster.local:3774'
+  ? 'http://watchlog-node-agent:3774'
   : 'http://127.0.0.1:3774';
 
 class SocketCli {
