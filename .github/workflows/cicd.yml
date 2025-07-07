@@ -39,12 +39,12 @@ jobs:
           node-version: 20
 
       - run: npm install
-      - run: echo testPass
+      - run: echo "✅ Tests passed"  # اینجا به‌زودی می‌تونی jest یا mocha بذاری
 
   release:
     needs: test
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v3
 
@@ -53,14 +53,18 @@ jobs:
           node-version: 20
           registry-url: 'https://registry.npmjs.org/'
 
-      - name: Copy releaserc config
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Copy .releaserc.yml to root
         run: cp .github/.releaserc.yml .
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Install semantic-release globally
-        run: npm i -g semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/npm @semantic-release/github
+      - name: Install semantic-release plugins
+        run: npm install -g semantic-release \
+                         @semantic-release/changelog \
+                         @semantic-release/git \
+                         @semantic-release/npm \
+                         @semantic-release/github
 
       - name: Run semantic-release
         run: semantic-release
