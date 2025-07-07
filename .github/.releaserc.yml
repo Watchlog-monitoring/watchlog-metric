@@ -9,4 +9,3 @@ plugins:
   - - "@semantic-release/git"
     - assets:
         - CHANGELOG.md
- 
