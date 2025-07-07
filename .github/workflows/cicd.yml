@@ -41,7 +41,6 @@ jobs:
       - run: npm install
       - run: echo testPass
 
-
   release:
     needs: test
     runs-on: ubuntu-latest
@@ -52,10 +51,19 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
+          registry-url: 'https://registry.npmjs.org/'
 
-      - run: cp .github/.releaserc.yml .
-      - run: npm i -g semantic-release @semantic-release/changelog @semantic-release/git
-      - run: semantic-release
+      - name: Copy releaserc config
+        run: cp .github/.releaserc.yml .
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install semantic-release globally
+        run: npm i -g semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/npm @semantic-release/github
+
+      - name: Run semantic-release
+        run: semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
