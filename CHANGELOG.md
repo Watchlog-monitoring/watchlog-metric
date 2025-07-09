@@ -1,3 +1,10 @@
+# [0.1.0](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.0.10...0.1.0) (2025-07-09)
+
+
+### Features
+
+* remove comments ([28b8b9c](https://github.com/Watchlog-monitoring/watchlog-metric/commit/28b8b9c8e11de714a19558aa10c9043cbd9b21d6))
+
 ## [0.0.10](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.0.9...0.0.10) (2025-07-09)
 
 
