@@ -1,9 +1,7 @@
 const axios = require('axios');
 
-// بررسی اینکه آیا پکیج داخل محیط Kubernetes اجرا می‌شود
 const isKubernetes = Boolean(process.env.KUBERNETES_SERVICE_HOST);
 
-// اگر داخل Kubernetes هست، آدرس agent درون‌کلاستری را استفاده می‌کنیم
 const serverURL = isKubernetes
   ? 'http://watchlog-node-agent:3774'
   : 'http://127.0.0.1:3774';
