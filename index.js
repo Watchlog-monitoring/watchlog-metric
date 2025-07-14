@@ -1,5 +1,4 @@
 const axios = require('axios');
-
 const isKubernetes = Boolean(process.env.KUBERNETES_SERVICE_HOST);
 
 const serverURL = isKubernetes
