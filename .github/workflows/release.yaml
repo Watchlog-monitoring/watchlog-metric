@@ -2,7 +2,7 @@ name: Build & Release
 on:
   push:
     branches:
-      - main
+      - '*'
 jobs:
   generate_version:
     runs-on: ubuntu-latest
@@ -17,6 +17,7 @@ jobs:
         uses: mehdi-ra/semversion@v0.1.1
         with:
           addDate: 'true'
+          dev_branch_name: "cicd/auto-release"
 
   create_github_release:
     runs-on: ubuntu-latest
