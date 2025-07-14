@@ -1,0 +1,9 @@
+{
+  "testEnvironment": "node",
+  "collectCoverage": false,
+  "passWithNoTests": true,
+  "testMatch": [
+    "**/tests/**/*.test.js",
+    "**/?(*.)+(spec|test).js"
+  ]
+}
