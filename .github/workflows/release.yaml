@@ -2,7 +2,7 @@ name: Build & Release
 on:
   push:
     branches:
-      - '*'
+      - cicd/auto-release
 jobs:
   generate_version:
     runs-on: ubuntu-latest
