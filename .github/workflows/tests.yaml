@@ -5,7 +5,7 @@ on:
     branches: [ main, master, develop ]
   push:
     branches:
-        - "*"
+        - cicd/auto-release
 jobs:
   test:
     runs-on: ubuntu-latest
