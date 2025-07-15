@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Magic Semver Action
         id: semver
-        uses: mehdi-ra/semversion@v0.1.1
+        uses: mehdi-ra/semversion@v0.1.2
         with:
           dev_branch_name: "cicd/auto-release"
 
