@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.1.0...0.2.0) (2025-07-15)
+
+
+### Features
+
+* add multi-step Kubernetes env detection and cache default server URL ([12c012e](https://github.com/Watchlog-monitoring/watchlog-metric/commit/12c012e2e4dacf8173d60c299df7cb512ede2b91))
+
 # [0.1.0](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.0.10...0.1.0) (2025-07-09)
 
 
