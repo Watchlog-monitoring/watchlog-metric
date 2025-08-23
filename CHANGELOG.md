@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.2.0...0.3.0) (2025-08-23)
+
+
+### Features
+
+* add TypeScript support ([0a185a0](https://github.com/Watchlog-monitoring/watchlog-metric/commit/0a185a08d0acf8f3ffd9395b7fb8a327fd526829))
+
 # [0.2.0](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.1.0...0.2.0) (2025-07-15)
 
 
