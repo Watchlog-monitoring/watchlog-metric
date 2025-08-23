@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.3.0...0.3.1) (2025-08-23)
+
+
+### Bug Fixes
+
+* issue in require watchlog on javascript ([786981b](https://github.com/Watchlog-monitoring/watchlog-metric/commit/786981b93b092f91152ef0f4d43f8c49ed217ddb))
+
 # [0.3.0](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.2.0...0.3.0) (2025-08-23)
 
 
