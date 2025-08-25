@@ -1,3 +1,10 @@
+## [0.3.2](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.3.1...0.3.2) (2025-08-25)
+
+
+### Bug Fixes
+
+* update README.md and fix import in ts. ([1d60aad](https://github.com/Watchlog-monitoring/watchlog-metric/commit/1d60aadda6a49eeda7bd6789228f2d508d99425b))
+
 ## [0.3.1](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.3.0...0.3.1) (2025-08-23)
 
 
