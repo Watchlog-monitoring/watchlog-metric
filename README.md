@@ -30,7 +30,7 @@ watchlogMetric.systembyte("Your_metric" , 1024000000) //for example : 1024000000
 ## TypeScript
 
 ```typescript
-import watchlog from "watchlog-metric";
+import watchlogMetric from 'watchlog-metric';
 
-watchlog.increment("Your_metric");
+watchlogMetric.increment("Your_metric");
 ```
