@@ -31,7 +31,12 @@ async function isRunningInK8s(): Promise<boolean> {
 }
 
 let cachedServerURL: string | null = null;
-async function getServerURL(): Promise<string> {
+async function getServerURL(userProvidedUrl?: string): Promise<string> {
+  // If user explicitly provided a URL, use it directly (skip auto-detection)
+  if (userProvidedUrl) {
+    return userProvidedUrl;
+  }
+  
   if (cachedServerURL) return cachedServerURL;
 
   if (await isRunningInK8s()) {
@@ -44,12 +49,18 @@ async function getServerURL(): Promise<string> {
 }
 
 class SocketCli {
+  private agentUrl?: string;
+
+  constructor(agentUrl?: string) {
+    this.agentUrl = agentUrl;
+  }
+
   async #sendMetric(method: string, metric: string, value = 1): Promise<void> {
     if (typeof metric !== 'string' || typeof value !== 'number') {
       return;
     }
 
-    const baseURL = await getServerURL();
+    const baseURL = await getServerURL(this.agentUrl);
     const url = `${baseURL}?method=${method}&metric=${encodeURIComponent(metric)}&value=${value}`;
 
     axios.get(url).catch(() => {
