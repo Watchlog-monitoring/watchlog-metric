@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.3.2...0.3.3) (2025-11-22)
+
+
+### Bug Fixes
+
+* update Readme.md ([c135c80](https://github.com/Watchlog-monitoring/watchlog-metric/commit/c135c800f58ccc19a1c7ec2d0435be748215cbeb))
+
 ## [0.3.2](https://github.com/Watchlog-monitoring/watchlog-metric/compare/0.3.1...0.3.2) (2025-08-25)
 
 
